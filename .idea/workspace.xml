@@ -31,9 +31,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46078817-d478-4899-8d09-9c57c1f2fb82" name="Default Changelist" comment="1-run">
+    <list default="true" id="46078817-d478-4899-8d09-9c57c1f2fb82" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Andrey.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/Sasha/ADC1115_3/ADC1115_3.ino" beforeDir="false" afterPath="$PROJECT_DIR$/main/Sasha/ADC1115_3/ADC1115_3.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino" beforeDir="false" afterPath="$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,15 +79,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/Sasha/ADC1115_3/ADC1115_3.ino">
+        <entry file="file://$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+            <state relative-caret-position="904">
+              <caret line="107" column="27" lean-forward="true" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lastVal</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,6 +105,7 @@
         <option value="$PROJECT_DIR$/main/push.bat" />
         <option value="$PROJECT_DIR$/main/README.txt" />
         <option value="$PROJECT_DIR$/main/Sasha/ADC1115_3/ADC1115_3.ino" />
+        <option value="$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino" />
       </list>
     </option>
   </component>
@@ -128,19 +135,6 @@
               <item name="ArduinoProject" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ArduinoProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArduinoProject" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Sasha" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArduinoProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ArduinoProject" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="Sasha" type="462c0819:PsiDirectoryNode" />
-              <item name="ADC1115_3" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -162,7 +156,12 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MyHobby\ArduinoProject\main\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -187,7 +186,7 @@
       <option name="presentableId" value="Default" />
       <updated>1560524810592</updated>
       <workItem from="1560524811770" duration="2237000" />
-      <workItem from="1560532690548" duration="96000" />
+      <workItem from="1560532690548" duration="3465000" />
     </task>
     <task id="LOCAL-00001" summary="1-run">
       <created>1560524897948</created>
@@ -273,16 +272,38 @@
       <option name="project" value="LOCAL" />
       <updated>1560532565858</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="1-run">
+      <created>1560532816167</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560532816167</updated>
+    </task>
+    <task id="LOCAL-00014" summary="1-run">
+      <created>1560532970937</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560532970937</updated>
+    </task>
+    <task id="LOCAL-00015" summary="1-run">
+      <created>1560535549704</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560535549704</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4790000" />
+    <option name="totallyTimeSpent" value="8159000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="840" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2533512" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2536913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -300,8 +321,8 @@
       <window_info anchor="bottom" id="CheckStyle" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.050847456" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49932885" visible="true" weight="0.0509915" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067115" side_tool="true" weight="0.4631728" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Cargo" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -346,10 +367,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/Sasha/ADC1115_3/ADC1115_3.ino">
+    <entry file="file://$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state relative-caret-position="904">
+          <caret line="107" column="27" lean-forward="true" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
         </state>
       </provider>
     </entry>

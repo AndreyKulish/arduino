@@ -43,29 +43,44 @@ void loop(void) {
     //A0
     ADCres = ads.readADC_SingleEnded(0); // читаем результат единичного преобразования
     Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
+    Serial.print("ADCres0 = ");
+    Serial.println(ADCres);
 
     //A1
     ADCres = ads.readADC_SingleEnded(1); // читаем результат единичного преобразования
     Amper = (ADCres * x1BIT) / 1000; // расчитываем напряжение
-
+    Serial.print("ADCres1 = ");
+    Serial.println(ADCres);
+    
     float firstPower = setDataToMonitor(Voltage, Amper, 0);
-    Serial.println("First amper = " + Amper);
-    Serial.println("First voltage = " + Voltage);
-    Serial.println("First power = " + firstPower);
+    Serial.print("First amper = ");
+    Serial.println(Amper);
+    Serial.println("First voltage = ");
+    Serial.println(Voltage);
+    Serial.println("First power = ");
+    Serial.println(firstPower);
 
     //A2
     ADCres = ads.readADC_SingleEnded(2); // читаем результат единичного преобразования
     Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
-
+    Serial.print("ADCres2 = ");
+    Serial.println(ADCres);
+    
     //A3
     ADCres = ads.readADC_SingleEnded(3); // читаем результат единичного преобразования
     Amper = (ADCres * x1BIT) / 10; // расчитываем напряжение
+    Serial.print("ADCres3 = ");
+    Serial.println(ADCres);
 
     float secondPower = setDataToMonitor(Voltage, Amper, 1);
 
-    Serial.println("Second amper = " + Amper);
-    Serial.println("Second voltage = " + Voltage);
-    Serial.println("Second power = " + secondPower);
+    Serial.println("Second amper = ");
+    Serial.println(Amper);
+    Serial.println("Second voltage = ");
+    Serial.println(Voltage);
+    Serial.println("Second power = ");
+    Serial.println(secondPower);
+   
 
     lastVal((secondPower * 100) / firstPower);
 
