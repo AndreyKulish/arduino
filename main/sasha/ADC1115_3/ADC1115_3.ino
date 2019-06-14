@@ -40,26 +40,34 @@ void setup(void) {
 
 
 void loop(void) {
+    //A0
     ADCres = ads.readADC_SingleEnded(0); // читаем результат единичного преобразования
     Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
+    //A1
     ADCres = ads.readADC_SingleEnded(1); // читаем результат единичного преобразования
     Amper = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
-    float one = setDataToMonitor(Voltage, Amper, 0);
-    Serial.println(one);
+    float firstPower = setDataToMonitor(Voltage, Amper, 0);
+    Serial.println("First amper = " + Amper);
+    Serial.println("First voltage = " + Voltage);
+    Serial.println("First power = " + firstPower);
+
+    //A2
     ADCres = ads.readADC_SingleEnded(2); // читаем результат единичного преобразования
     Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
+    //A3
     ADCres = ads.readADC_SingleEnded(3); // читаем результат единичного преобразования
     Amper = (ADCres * x1BIT) / 10; // расчитываем напряжение
 
-    float sec = setDataToMonitor(Voltage, Amper, 1);
-    Serial.println(sec);
-    int B = (int) sec;
-    int A = (int) one;
-    int C = (int) ((B * 100) / A);
-    lastVal((sec * 100) / one);
+    float secondPower = setDataToMonitor(Voltage, Amper, 1);
+
+    Serial.println("Second amper = " + Amper);
+    Serial.println("Second voltage = " + Voltage);
+    Serial.println("Second power = " + secondPower);
+
+    lastVal((secondPower * 100) / firstPower);
 
     delay(1000);
 }
@@ -67,6 +75,7 @@ void loop(void) {
 float setDataToMonitor(float vlt, float amp, int raw) {
     float pwr = vlt * amp;
     char buffer[4];
+
     String s = dtostrf(vlt, 3, 2, buffer);
     lcd.setCursor(0, raw);
     lcd.print(s);
@@ -82,17 +91,16 @@ float setDataToMonitor(float vlt, float amp, int raw) {
 }
 
 void lastVal(float value) {
-
     dtostrf(value, 2, 0, buffer);
-//value = 55.66;
-
-    Serial.println(value);
-
-    Serial.println(buffer[0]);
-
-    Serial.println(buffer[1]);
     lcd.setCursor(15, 0);
     lcd.print(buffer[0]);
+    lcd.setCursor(16, 0);
+    lcd.print(buffer[1]);
+
+    float second = 100 - value;
+    dtostrf(second, 2, 0, buffer);
     lcd.setCursor(15, 1);
+    lcd.print(buffer[0]);
+    lcd.setCursor(16, 1);
     lcd.print(buffer[1]);
 }
