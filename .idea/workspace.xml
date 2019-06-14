@@ -32,9 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46078817-d478-4899-8d09-9c57c1f2fb82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Andrey.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino" beforeDir="false" afterPath="$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="904">
-              <caret line="107" column="27" lean-forward="true" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
+            <state>
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -186,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1560524810592</updated>
       <workItem from="1560524811770" duration="2237000" />
-      <workItem from="1560532690548" duration="3465000" />
+      <workItem from="1560532690548" duration="4527000" />
     </task>
     <task id="LOCAL-00001" summary="1-run">
       <created>1560524897948</created>
@@ -293,14 +291,28 @@
       <option name="project" value="LOCAL" />
       <updated>1560535549704</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="1-run">
+      <created>1560536206897</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560536206897</updated>
+    </task>
+    <task id="LOCAL-00017" summary="1-run">
+      <created>1560536399729</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560536399729</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8159000" />
+    <option name="totallyTimeSpent" value="9221000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.2536913" />
@@ -369,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/sasha/ADC1115_3/ADC1115_3.ino">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
-          <caret line="107" column="27" lean-forward="true" selection-start-line="107" selection-start-column="27" selection-end-line="107" selection-end-column="27" />
+        <state>
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
