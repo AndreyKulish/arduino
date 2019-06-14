@@ -1,3 +1,7 @@
 hello world
 3333
+<<<<<<< Updated upstream
 222232
+=======
+wefwev
+>>>>>>> Stashed changes
