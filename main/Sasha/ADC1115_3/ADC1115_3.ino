@@ -1,8 +1,8 @@
 #include <Wire.h>
 #include <Adafruit_ADS1015.h>
-#include <LiquidCrystal_I2C.h> 
+#include <LiquidCrystal_I2C.h>
 
-LiquidCrystal_I2C lcd(0x3F,16,2); 
+LiquidCrystal_I2C lcd(0x3F, 16, 2);
 
 // Адрес микросхемы
 // 0x48 - ADDR pin connected to GROUND (default)
@@ -27,73 +27,72 @@ int16_t ADCres; // переменная для чтения результата
 float Voltage = 0.0; // переменная для расчета напряжения
 float Amper = 0.0; // переменная для расчета напряжения
 char buffer[2];
-void setup(void) 
-{
-Serial.begin(9600);
-lcd.init(); 
-lcd.backlight(); 
+
+void setup(void) {
+    Serial.begin(9600);
+    lcd.init();
+    lcd.backlight();
 
 // инициализация библиотеки ADS1115
-ads.begin();
-ads.setGain(xGAIN);
+    ads.begin();
+    ads.setGain(xGAIN);
 }
 
 
-void loop(void) 
-{
-ADCres = ads.readADC_SingleEnded(0); // читаем результат единичного преобразования
-Voltage = (ADCres * x1BIT)/1000; // расчитываем напряжение
+void loop(void) {
+    ADCres = ads.readADC_SingleEnded(0); // читаем результат единичного преобразования
+    Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
-ADCres = ads.readADC_SingleEnded(1); // читаем результат единичного преобразования
-Amper = (ADCres * x1BIT)/1000; // расчитываем напряжение
+    ADCres = ads.readADC_SingleEnded(1); // читаем результат единичного преобразования
+    Amper = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
-float one = setDataToMonitor(Voltage, Amper , 0);
-Serial.println(one);
-ADCres = ads.readADC_SingleEnded(2); // читаем результат единичного преобразования
-Voltage = (ADCres * x1BIT)/1000; // расчитываем напряжение
+    float one = setDataToMonitor(Voltage, Amper, 0);
+    Serial.println(one);
+    ADCres = ads.readADC_SingleEnded(2); // читаем результат единичного преобразования
+    Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
 
-ADCres = ads.readADC_SingleEnded(3); // читаем результат единичного преобразования
-Amper = (ADCres * x1BIT)/10; // расчитываем напряжение
+    ADCres = ads.readADC_SingleEnded(3); // читаем результат единичного преобразования
+    Amper = (ADCres * x1BIT) / 10; // расчитываем напряжение
 
-float sec = setDataToMonitor(Voltage, Amper , 1);
-Serial.println(sec);
-int B = (int)sec ;
-int A = (int) one ;
-int C = (int)((B*100) / A);
-lastVal((sec*100) / one);
+    float sec = setDataToMonitor(Voltage, Amper, 1);
+    Serial.println(sec);
+    int B = (int) sec;
+    int A = (int) one;
+    int C = (int) ((B * 100) / A);
+    lastVal((sec * 100) / one);
 
-delay(1000);
+    delay(1000);
 }
 
-float setDataToMonitor(float vlt, float amp, int raw){
-float pwr = vlt * amp;
-char buffer[4];
-String s = dtostrf(vlt, 3, 2, buffer);
-lcd.setCursor(0,raw);
-lcd.print(s);
+float setDataToMonitor(float vlt, float amp, int raw) {
+    float pwr = vlt * amp;
+    char buffer[4];
+    String s = dtostrf(vlt, 3, 2, buffer);
+    lcd.setCursor(0, raw);
+    lcd.print(s);
 
-s = dtostrf(amp, 3, 2, buffer);
-lcd.setCursor(5,raw);
-lcd.print(s);
+    s = dtostrf(amp, 3, 2, buffer);
+    lcd.setCursor(5, raw);
+    lcd.print(s);
 
-s = dtostrf(pwr, 4, 2, buffer);
-lcd.setCursor(10,raw);
-lcd.print(s);
-return pwr;
+    s = dtostrf(pwr, 4, 2, buffer);
+    lcd.setCursor(10, raw);
+    lcd.print(s);
+    return pwr;
 }
 
-void lastVal(float value){
-  
-dtostrf(value, 2, 0, buffer);
+void lastVal(float value) {
+
+    dtostrf(value, 2, 0, buffer);
 //value = 55.66;
 
-Serial.println(value);
+    Serial.println(value);
 
-Serial.println(buffer[0]);
+    Serial.println(buffer[0]);
 
-Serial.println(buffer[1]);
-lcd.setCursor(15,0);
-lcd.print(buffer[0]);
-lcd.setCursor(15,1);
-lcd.print(buffer[1]);
+    Serial.println(buffer[1]);
+    lcd.setCursor(15, 0);
+    lcd.print(buffer[0]);
+    lcd.setCursor(15, 1);
+    lcd.print(buffer[1]);
 }
