@@ -55,9 +55,9 @@ void loop(void) {
     float firstPower = setDataToMonitor(Voltage, Amper, 0);
     Serial.print("First amper = ");
     Serial.println(Amper);
-    Serial.println("First voltage = ");
+    Serial.print("First voltage = ");
     Serial.println(Voltage);
-    Serial.println("First power = ");
+    Serial.print("First power = ");
     Serial.println(firstPower);
 
     //A2
@@ -74,11 +74,11 @@ void loop(void) {
 
     float secondPower = setDataToMonitor(Voltage, Amper, 1);
 
-    Serial.println("Second amper = ");
+    Serial.print("Second amper = ");
     Serial.println(Amper);
-    Serial.println("Second voltage = ");
+    Serial.print("Second voltage = ");
     Serial.println(Voltage);
-    Serial.println("Second power = ");
+    Serial.print("Second power = ");
     Serial.println(secondPower);
    
 
