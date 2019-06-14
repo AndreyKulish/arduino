@@ -19,8 +19,8 @@ Adafruit_ADS1115 ads(0x48);
 // GAIN_FOUR // 4x gain +/- 1.024V 1 bit = 0.03125 mV
 // GAIN_EIGHT // 8x gain +/- 0.512V 1 bit = 0.015625 mV
 // GAIN_SIXTEEN // 16x gain +/- 0.256V 1 bit = 0.0078125 mV
-#define xGAIN GAIN_TWOTHIRDS // делитель
-#define x1BIT 0.1875 // значение 1 бита
+#define xGAIN GAIN_EIGHT // делитель
+#define x1BIT 0.015625 // значение 1 бита
 
 
 int16_t ADCres; // переменная для чтения результата 16 бит
@@ -42,13 +42,13 @@ void setup(void) {
 void loop(void) {
     //A0
     ADCres = ads.readADC_SingleEnded(0); // читаем результат единичного преобразования
-    Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
+    Voltage = (ADCres * x1BIT) / 10; // расчитываем напряжение
     Serial.print("ADCres0 = ");
     Serial.println(ADCres);
 
     //A1
     ADCres = ads.readADC_SingleEnded(1); // читаем результат единичного преобразования
-    Amper = (ADCres * x1BIT) / 1000; // расчитываем напряжение
+    Amper = (ADCres * x1BIT) / 10; // расчитываем напряжение
     Serial.print("ADCres1 = ");
     Serial.println(ADCres);
     
@@ -62,7 +62,7 @@ void loop(void) {
 
     //A2
     ADCres = ads.readADC_SingleEnded(2); // читаем результат единичного преобразования
-    Voltage = (ADCres * x1BIT) / 1000; // расчитываем напряжение
+    Voltage = (ADCres * x1BIT) / 10; // расчитываем напряжение
     Serial.print("ADCres2 = ");
     Serial.println(ADCres);
     
