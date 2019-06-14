@@ -1,3 +1,3 @@
-git commit add *
+git add .
 git commit -m 'from sasha'
 git push
