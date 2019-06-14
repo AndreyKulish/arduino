@@ -1,7 +1,2 @@
 hello world
-3333
-<<<<<<< Updated upstream
-222232
-=======
-wefwevewfwefwef
->>>>>>> Stashed changes
+3333reberberb
