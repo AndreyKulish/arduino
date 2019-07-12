@@ -1,7 +1,15 @@
-hello world
-3333reberberb
-fwefwefwef
-123
-111
-222
-333
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(2, 3); // RX, TX
+void setup() {
+  Serial.begin(19200);  //Скорость порта для связи Arduino с компьютером
+  Serial.println("Goodnight moon!");
+  mySerial.begin(19200);  //Скорость порта для связи Arduino с GSM модулем
+  mySerial.println("AT");
+}
+
+void loop() {
+  if (mySerial.available())
+    Serial.write(mySerial.read());
+  if (Serial.available())
+    mySerial.write(Serial.read());
+}
